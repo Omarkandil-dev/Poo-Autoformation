@@ -1,21 +1,31 @@
-<?php
-class Task
-{
-    public $description;
-    public $completed = false;
-    public function __construct($description)
-    {
-        $this->description = $description;
+<?php 
+class Student{
+
+    public $name; 
+    public $age;
+
+    public function set_name($name) {
+        $this->name = $name;
     }
-    public function complete()
-    {
-        return $this->completed = true;
+    public function get_name() {
+        return $this->name;
+    }
+
+    public function set_age($age) {
+        $this->age = $age;
+    }
+
+    public function get_age() {
+        return $this->age;
     }
 }
 
-$task = new Task("Design Thinking");
-$task2 = new Task("UML");
-var_dump($task->description);
-var_dump($task2->description);
-$task->complete();
-var_dump($task->completed);
+    $student = new Student();
+    $student->set_name('Omar');
+    $student->set_age(19);
+
+    echo "Name :" .$student->get_name();
+    echo "<br>";
+    echo "Age : " .$student->get_age();
+
+?>
